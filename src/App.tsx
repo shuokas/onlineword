@@ -4,8 +4,7 @@ function App() {
       添加基本文件
       <p> 是测试 </p>
       <p>prettier测试</p>
-      <p>p
-        rettier测试</p>
+      <p>{window.location.host}</p>
     </div>
   );
 }
