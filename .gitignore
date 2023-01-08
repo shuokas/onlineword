@@ -25,4 +25,5 @@ yarn-error.log*
 .history
 .idea
 .husky
-.eslintcache
+/.eslintcache
+/.husky/
