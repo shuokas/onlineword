@@ -1,4 +1,4 @@
-import { ReportHandler } from "web-vitals";
+import { ReportHandler } from "web-vitals"; // 做埋点上报功能
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
