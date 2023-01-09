@@ -1,4 +1,7 @@
-function App() {
+// 引入路由
+import BasicRoutes from "./routes";
+
+const App = () => {
   return (
     <div>
       添加基本文件
@@ -9,8 +12,10 @@ function App() {
       <p>husky 添加到文件</p>
       <p>文件测试</p>
       <p>修改 配置文件</p>
+      {/* <ContentMain /> */}
+      <BasicRoutes />
     </div>
   );
-}
+};
 
 export default App;
