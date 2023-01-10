@@ -7,17 +7,25 @@ import "./index.scss";
  * 4.
  */
 const Content = () => {
-  const [rowList, setRowList] = useState([1]);
+  const [rowList, setRowList] = useState(["init"]);
   useEffect(() => {
     console.log("我是公共输入窗体，输入完成后变成span-text等文本框");
-    setRowList([1, 2, 13, 4, 5, 6, 7, 11123, 24]);
+    setRowList(["aaa", "bbb"]);
   }, []);
 
   const blurChangeFn = (e: any) => {
-    console.log(e);
+    console.log("blur", e.target.innerText);
   };
   const changeFn = (e: any) => {
-    console.log(e);
+    console.log("input", e.target.innerText);
+  };
+  const onKeyDownFn = (e: any) => {
+    if (e.keyCode === 13) {
+      console.log("onKeyDownFn", e.keyCode);
+      console.log("rowList", ...rowList);
+
+      setRowList([...rowList, ""]);
+    }
   };
 
   return (
@@ -30,6 +38,7 @@ const Content = () => {
           key={i}
           onBlur={blurChangeFn}
           onInput={changeFn}
+          onKeyDown={onKeyDownFn}
         >
           <span>{item}</span>
         </div>
